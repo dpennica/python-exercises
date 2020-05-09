@@ -8,7 +8,8 @@ from pandas import ExcelFile
 import pandas as pd
 
 # %%
-df = pd.read_excel("global_power_plant_database.xlsx", sheet_name="Sheet1")
+df = pd.read_excel(
+    "./global_database_power_plants/global_power_plant_database.xlsx", sheet_name="Sheet1")
 
 # %%
 country_set = set(df["country"])

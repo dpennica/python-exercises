@@ -8,7 +8,8 @@ import xlsxwriter
 
 # In[33]:
 # Create a workbook and add a worksheet.
-workbook = xlsxwriter.Workbook('global_power_plant_database.xlsx')
+workbook = xlsxwriter.Workbook(
+    './global_database_power_plants/global_power_plant_database.xlsx')
 
 # In[34]:
 worksheet = workbook.add_worksheet()
@@ -16,7 +17,7 @@ worksheet = workbook.add_worksheet()
 
 # In[35]:
 
-with open("./global_power_plant_database.csv") as csvfile:
+with open("./global_database_power_plants/global_power_plant_database.csv") as csvfile:
     # Start from the first cell. Rows and columns are zero indexed.
     row_num = col_num = 0
     csvreader = csv.reader(csvfile)
