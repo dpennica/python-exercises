@@ -33,11 +33,13 @@ finally:
 # %%
 gp_df = df[["name", "latitude", "longitude"]]
 
+# %%
 
+print(gp_df)
 # %%
 gp_df = gp_df.rename(columns={"latitude": "lat", "longitude": "lng"})
 
-
+print(gp_df)
 # %%
 try:
     con = lite.connect("gbpower.db")
@@ -49,3 +51,6 @@ except lite.Error as e:
 finally:
     if con:
         con.close()
+
+
+# %%
