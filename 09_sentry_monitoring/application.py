@@ -1,4 +1,7 @@
 import requests
 import sentry_sdk
+import os
 
-sentry_sdk.init("https://e515d24b957a404596e64d84b2ba4c82@o413185.ingest.sentry.io/5297010")
+sentry_sdk.init(os.getenv("SENTRY_KEY"))
+
+division_by_zero = 1/0
